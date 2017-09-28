@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>Chronos的博客</title>
+  <title>CSS中的布局详解笔记（二） | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="计算机科学与技术专业，主要写前端。">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chronos的博客">
-<meta property="og:url" content="http://chronosblog.top/index.html">
+  <meta name="description" content="CSS中的浮动与定位">
+<meta name="keywords" content="CSS,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS中的布局详解笔记（二）">
+<meta property="og:url" content="http://chronosblog.top/2017/08/07/cssstudy4/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="计算机科学与技术专业，主要写前端。">
+<meta property="og:description" content="CSS中的浮动与定位">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-28T12:25:13.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chronos的博客">
-<meta name="twitter:description" content="计算机科学与技术专业，主要写前端。">
+<meta name="twitter:title" content="CSS中的布局详解笔记（二）">
+<meta name="twitter:description" content="CSS中的浮动与定位">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -168,16 +169,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-cssstudy4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-cssstudy4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/cssstudy4/">CSS中的布局详解笔记（二）</a>
+    <h1 class="article-title" itemprop="name">
+      CSS中的布局详解笔记（二）
     </h1>
   
 
@@ -192,11 +191,92 @@
       
         <hr>
 <p>CSS中的浮动与定位</p>
-        
-          <a class="article-more-a" href="/2017/08/07/cssstudy4/#more">more >></a>
-        
+<a id="more"></a>
+<h3 id="display：float-浮动详解"><a href="#display：float-浮动详解" class="headerlink" title="display：float 浮动详解"></a>display：float 浮动详解</h3><p>在我刚开始学习CSS的时候，看到浮动这个概念，只知道是让一个盒子向左或向右移动，也仅仅在一些简单布局中使用，但后来遇到的许多坑让我意识到，搞清楚浮动究竟是什么还是非常有必要的。</p>
+<p>通过查阅网上各种博客文档等，我总结出了浮动的定义：<strong>所谓浮动，就是让一个元素脱离标准文档流，漂浮在标准流之上，然后按照指定的方向向左或向右移动，碰到父级边界或者另外一个浮动元素停止。</strong></p>
+<p>在前面的总结中已经提到过什么是标准文档流，在布局的时候，浮动脱离标准文档流是非常必要的，比如我们想要让几个块级元素并排显示，这时候用浮动就会显得很方便。</p>
+<p>在这篇文章中有关浮动的讲解非常好：<a href="http://www.cnblogs.com/zhongxinWang/archive/2013/03/27/2984764.html" target="_blank" rel="external">CSS浮动</a></p>
+<p>其中作者总结了一个很重要的概念：</p>
+<blockquote>
+<p>假如某个DIV元素A是浮动的，如果A元素的上一个元素也是浮动的，那么A元素会跟随在上一个元素的后边（如果一行放不下这两个元素，那么A元素会被挤到下一行）;如果A元素上一个元素是标准流中的元素，那么A的相对垂直位置不会改变，也就是说A的顶部总是和上一个元素的底部对齐。</p>
+</blockquote>
+<p>但浮动也会带来一个很严重的问题：<strong>浮动元素脱离标准文档流，会导致元素重叠或者父元素的高度塌陷。</strong></p>
+<p>这时候就要用到清除浮动。</p>
+<p>清除浮动，顾名思义就是为了解决浮动带来的一系列问题，也可以理解为打破横向排列。</p>
+<p>在上述的那篇文章中，作者还有一个总结很重要：<strong>清除浮动的这个规则，只能影响使用清除的元素本身，不能影响其他元素。</strong></p>
+<p>下面来总结几种常用的清除浮动的方式。</p>
+<h4 id="1-clear属性"><a href="#1-clear属性" class="headerlink" title="1. clear属性"></a>1. clear属性</h4><p>例如某个div元素前面的兄弟元素，如果有元素不想受到浮动元素的影响，那么就在这个浮动元素上使用 <code>clear:both</code>即可。</p>
+<h4 id="2-给父元素设置高度"><a href="#2-给父元素设置高度" class="headerlink" title="2.给父元素设置高度"></a>2.给父元素设置高度</h4><p>一般父元素没有设置高度的情况下，子元素浮动之后，父元素会忽略子元素的高度，导致父元素的高度产生塌陷，对于这样的问题，可以给父元素设置高度来解决。<br>但这样做必然要计算好高度值才能够设置，因此除了给父元素设置高度，还可以用其他两种办法：</p>
+<ul>
+<li>给最后一个元素设置clear：both</li>
+<li>给父元素新建一个BFC</li>
+</ul>
+<p>对于第二种方法，在前面的文章中提到过，创建一个BFC的办法有很多，不过在清除浮动中，比较常用的是 <code>overflow:hidden</code>属性。</p>
+<p>overflow:hidden是干什么的呢？W3C给出的定义如下：</p>
+<blockquote>
+<p>overflow属性规定当内容溢出元素框时发生的事情。其中hidden代表内容会被修剪，并且其余内容是不可见的。</p>
+</blockquote>
+<p>给父元素设置这个样式，不仅可以清除父级内使用float所产生的浮动，比起其他方法来说，显得更简洁明了。</p>
+<p>但是好用归好用，为什么设置了这个样式就能够清除浮动？</p>
+<p>查阅了网上的各路大神的文章之后终于有了结论：<strong>overflow:hidden的作用是超出元素框部分的内容要被裁剪隐藏，这个裁剪隐藏是根据高度来定的，如果高度的默认值是auto，那么必须先要计算其中浮动元素的高度，也就是其真实高度，再去确定隐藏。overflow：hidden出发了BFC，使得这个元素中的子元素不能影响外部其他元素，所以必须要计算内容的全部高度，才能确定在什么地方开始隐藏。</strong></p>
+<h4 id="3-：after方法"><a href="#3-：after方法" class="headerlink" title="3.：after方法"></a>3.：after方法</h4><p>这种方法是利用：after和：before来在元素内部插入两个元素快来达到清除浮动的效果，原理类似于clear：both。</p>
+<p>示例代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        outer &#123;</div><div class="line">            zoom: 1;</div><div class="line">        &#125;</div><div class="line">        .outer :after &#123;</div><div class="line">            clear: both;</div><div class="line">            content: &apos;.&apos;;</div><div class="line">            display: block;</div><div class="line">            width: 0;</div><div class="line">            height: 0;</div><div class="line">            visibility: hidden;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class=&quot;div1&quot;&gt;1&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;div2&quot;&gt;2&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;div3&quot;&gt;3&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="position属性"><a href="#position属性" class="headerlink" title="position属性"></a>position属性</h3><p>position属性有4个值。</p>
+<h4 id="1-position：static"><a href="#1-position：static" class="headerlink" title="1.position：static"></a>1.position：static</h4><p>默认值，元素都位于标准文档流中，不会受到top、bottom、left、right的影响。</p>
+<h4 id="2-position：relative"><a href="#2-position：relative" class="headerlink" title="2.position：relative"></a>2.position：relative</h4><p>relative所产生的定位为相对定位，这种定位是相对于元素本身正常的位置，根据top、right、top、bottom等属性在标准文档流中偏移的位置。</p>
+<p>设置相对定位属性的元素，无论如何移动，它原本所占的空间是不会变的，就好像在教室里的座位，无论你怎么移动，你的座位始终在那里占着。</p>
+<p>而且，relative不会影响除自身以外其他元素的位置，大小。</p>
+<h4 id="3-position：absolute"><a href="#3-position：absolute" class="headerlink" title="3.position：absolute"></a>3.position：absolute</h4><p>absolute所产生的定位又称为绝对定位，这种定位是直接将元素从标准文档流中拿出来，然后再使用top、right、left、bottom等属性来进行定位。绝对定位元素的位置相对于最近的已定位的父亲，如果元素没有已定位的父亲，那么这个元素位置相对于根元素，也就是html。</p>
+<p>绝对定位的元素层叠性由z-index属性来控制，值越大，表明优先级越高，距离观察者越接近。</p>
+<p>绝对定位元素能够脱离标准文档流，这一点和浮动有着异曲同工之妙，同样会造成父元素的塌陷，同时和浮动元素一样悬浮在标准文档流的上方，还会遮住下面的内容。</p>
+<p>还有一些在使用过程当中应当注意的知识点：</p>
+<ul>
+<li>absolute能让inline元素被“块级”化。</li>
+<li>absolute能让元素已有的float失效</li>
+<li>相对定位元素一般用来作为绝对定位元素的容器块，也就是口诀：“子绝父相”。</li>
+</ul>
+<h4 id="4-position：fixed"><a href="#4-position：fixed" class="headerlink" title="4.position：fixed"></a>4.position：fixed</h4><p>fixed和absolute基本一致，也完全脱离标准文档流，但关键区别在于fixed永远是根据浏览器确定位置，即使是窗口滚动他也不会动，所以叫做固定定位。</p>
+<h4 id="5-background-position"><a href="#5-background-position" class="headerlink" title="5.background-position"></a>5.background-position</h4><p>background-position一般用来设置背景图像的位置。<br>一般有两个值，如果仅规定了一个值，那么第二个值将默认为center。<br><code>background-position:top left;</code><br>还可以用百分比来表示，其中第一个表示水平位置，第二个表示垂直位置：<br><code>background-position：x% y%;</code><br>还可以用像素来表示，值表示的意义同上。<br><code>background-position：50px 100px;</code></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li>腾讯课堂前端NEXT课程资料文档</li>
+<li>W3Cschool</li>
+<li><a href="http://blog.csdn.net/sofia92/article/details/50469948" target="_blank" rel="external">CSDN网站布局中position的值的用法</a></li>
+</ul>
+<p>我的个人博客：<a href="[http://chronosblog.top">http://chronosblog.top</a><br>我的微信公众号：runtustory</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/75849254.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/28425727.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -231,16 +311,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/07/cssstudy4/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/08/07/cssstudy4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/05/cssstudy3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS中的布局详解笔记（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -260,539 +399,12 @@
 
 
 
-
   
-    <article id="post-cssstudy3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/05/cssstudy3/">CSS中的布局详解笔记（一）</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/05/cssstudy3/" class="archive-article-date">
-  	<time datetime="2017-08-05T03:36:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>从盒模型入手整理CSS的布局以及知识点详解。</p>
-        
-          <a class="article-more-a" href="/2017/08/05/cssstudy3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/05/cssstudy3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cssstudy2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/03/cssstudy2/">总结CSS中的单位</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/03/cssstudy2/" class="archive-article-date">
-  	<time datetime="2017-08-03T12:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>总结CSS中的单位以及用法。</p>
-        
-          <a class="article-more-a" href="/2017/08/03/cssstudy2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/03/cssstudy2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cssstudy1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/cssstudy1/">总结CSS基础中的一些小坑</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/01/cssstudy1/" class="archive-article-date">
-  	<time datetime="2017-08-01T15:45:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>CSS虽然很有趣，入门也容易，但对于前端菜鸟、初学者来说，还是有一些小坑是无法避免的，这些小坑相对而言更需要去积累和理解，也是比较容易忽略的一些问题，以至于学到后来，因为没有搞定这些小坑而延伸出许多“大坑”，相当影响学习效率。</p>
-        
-          <a class="article-more-a" href="/2017/08/01/cssstudy1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/01/cssstudy1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-zawen" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/zawen/">杂文随笔分类</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/30/zawen/" class="archive-article-date">
-  	<time datetime="2017-07-30T06:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#这里放杂文随笔<br>这里放杂文随笔</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文/" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/30/zawen/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-novel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/novel/">这里是小说连载</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/30/novel/" class="archive-article-date">
-  	<time datetime="2017-07-30T06:52:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#这里是小说的连载<br>这里是小说的连载</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">小说</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/小说/" class="article-tag-list-link color3">小说</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/30/novel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-code" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/code/">编程分类</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/30/code/" class="archive-article-date">
-  	<time datetime="2017-07-30T06:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#这里面放编程类的文章<br>这里面放编程类的文章</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/30/code/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -823,8 +435,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
