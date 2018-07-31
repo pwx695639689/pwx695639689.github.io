@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>Tag: 前端 | Chronos的博客</title>
+  <title>纯CSS实现朋友圈评论按钮 | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="计算机科学与技术专业，主要写前端。">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chronos的博客">
-<meta property="og:url" content="http://chronosblog.top/tags/前端/index.html">
+  <meta name="description" content="纯CSS实现朋友圈评论按钮">
+<meta name="keywords" content="CSS,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纯CSS实现朋友圈评论按钮">
+<meta property="og:url" content="http://chronosblog.top/2017/09/11/cssstudy7/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="计算机科学与技术专业，主要写前端。">
+<meta property="og:description" content="纯CSS实现朋友圈评论按钮">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3081331-4c1246f95ae794bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-07-31T14:37:25.591Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chronos的博客">
-<meta name="twitter:description" content="计算机科学与技术专业，主要写前端。">
+<meta name="twitter:title" content="纯CSS实现朋友圈评论按钮">
+<meta name="twitter:description" content="纯CSS实现朋友圈评论按钮">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3081331-4c1246f95ae794bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -168,36 +171,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-cssstudy7" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      纯CSS实现朋友圈评论按钮
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/11/cssstudy7/" class="archive-article-date">
+
+        
+        <a href="/2017/09/11/cssstudy7/" class="archive-article-date">
   	<time datetime="2017-09-11T12:31:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/11/cssstudy7/">纯CSS实现朋友圈评论按钮</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>纯CSS实现朋友圈评论按钮</p>
+<a id="more"></a>
+<p>如果使用前端技术来实现微信朋友圈页面的话，其中朋友圈的评论按钮相信很多人会选择使用切图来实现，但使用纯CSS实现也不难。</p>
+<p>使用纯CSS实现，则需要使用伪类、定位以及CSS3中的一些新属性。</p>
+<p>首先，先构建评论按钮的HTML布局：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;reply-btn-container&quot;&gt;</div><div class="line">	&lt;span class=&quot;reply-btn&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>然后便是CSS样式，首先我们设置包裹span标签的容器的属性，假设它是一个100×100的盒子，其样式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.reply-btn-container &#123;</div><div class="line">	width: 100px;</div><div class="line">	height: 100px;</div><div class="line">	margin: 0 auto;</div><div class="line">	text-align: right;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们知道，让块级元素水平居中可以设置margin：0 auto；，行内元素水平居中可以设置text-align： center；。</p>
+<p>在这里，设置margin：0 auto；主要是为了让盒子在页面中居中，方便查看，在实际页面中需要根据情况来设置。</p>
+<p>而这里的text-align： right；是为了让span标签在盒子内靠右，毕竟评论按钮一般位于页面的右侧。</p>
+<p>接下来便是span标签的样式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.reply-btn &#123;</div><div class="line">	width: 48px;</div><div class="line">	height: 36px;</div><div class="line">	background-color: currentColor;</div><div class="line">	color: #8c99c1;</div><div class="line">	display: inline-block;</div><div class="line">	position: relative;</div><div class="line">	vertical-align: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在span标签的样式中，由于它是一个行内元素，无法独占一行，所以不能直接设置宽高，但是这个按钮必须是要呈现为一个有宽高的矩形，因此，我们设置它的display属性为inline-block，这样虽然它仍然不独占一行，但可以设置宽高。</p>
+<p>这里还用到了position属性的relative，也就是相对定位。这里来解释下position的几个值有何不同：</p>
+<p>relative：相对定位，也就是相对于其正常位置（自己）进行定位，比如此处设置left：20px，就是相对自己当前的位置向左偏移20px。相对定位是不会脱离标准文档流的，只是视觉上发生了偏移，还会保持原来的占位。</p>
+<p>absolute：绝对定位，是相对于自己最近的那个父元素进行定位（父元素必须设置相对定位或绝对定位），如若找不到符合条件的父元素，那么将相对于body进行定位。绝对定位是脱离标准文档流的，父元素容器将得不到绝对定位了的子元素的高度。而且不管是块级元素还是行内元素，绝对定位之后，display属性为block。</p>
+<p>flixd：固定定位，是相对浏览器窗口的定位，并且脱离标准文档流。</p>
+<p>这里使用relative是为了让之后的伪类元素使用absolute。</p>
+<p>background-color: currentColor;这个属性中的currentColor值，currentColor表示“当前的标签所继承的文字颜色”，换种方式表示就是：currentColor = color的值。</p>
+<p>vertical-align: middle;该属性设置元素的垂直对齐方式，此处middle为设置元素在父元素的中部。</p>
+<p>此时，按钮矩形已经设置完毕，接下来，便是按钮左边的三角形和内部的两个小圆点了，我们通过CSS伪类来实现，主要是before和after。</p>
+<p>before 和 after 顾名思义 其就是附着在元素前后的 伪元素，说他是伪元素的意思就是，元素不是在DOM中生成的，而是在浏览器渲染引擎渲染CSS的时候画上去的，所以你在浏览器查看元素上是看不到伪元素的HTML结果的。</p>
+<p>CSS样式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">.reply-btn::before &#123;</div><div class="line">	content: &quot;&quot;;</div><div class="line">	width: 0;</div><div class="line">	height: 0;</div><div class="line">	border: 3px solid currentColor;</div><div class="line">	border-color: transparent currentColor transparent currentColor;</div><div class="line">	border-width: 4px 6px 4px 0;</div><div class="line">	position: absolute;</div><div class="line">	top: 14px;</div><div class="line">	left: -6px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.reply-btn::after &#123;</div><div class="line">	content: &quot;&quot;;</div><div class="line">	width: 6px;</div><div class="line">	height: 6px;</div><div class="line">	background: #fff;</div><div class="line">	position: absolute;</div><div class="line">	top: 13px;</div><div class="line">	left: 10px;</div><div class="line">	border-radius: 25%;</div><div class="line">	box-shadow: 22px 0 0 #fff;</div><div class="line">	transform: translate(0, 50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其中transform属性是向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。<br>在评论按钮中的另一个小圆点，是设置第一个小圆点的box-shadow属性，也就是阴影来实现的。</p>
+<p>最后呈现效果如图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3081331-4c1246f95ae794bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回复按钮"></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/75849254.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/28425727.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,7 +270,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -226,335 +283,111 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/09/11/cssstudy7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/15/cssstudy6/" class="archive-article-date">
-  	<time datetime="2017-08-15T13:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/04/17/diary-2018-4-17/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          一千零一面镜子
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/15/cssstudy6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS中的布局详解笔记（四）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/15/cssstudy6/">CSS中的布局详解笔记（四）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/10/cssstudy5/" class="archive-article-date">
-  	<time datetime="2017-08-10T11:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/10/cssstudy5/">CSS中的布局详解笔记（三）：flex布局</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/07/cssstudy4/" class="archive-article-date">
-  	<time datetime="2017-08-07T07:11:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/07/cssstudy4/">CSS中的布局详解笔记（二）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/05/cssstudy3/" class="archive-article-date">
-  	<time datetime="2017-08-05T03:36:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/cssstudy3/">CSS中的布局详解笔记（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/03/cssstudy2/" class="archive-article-date">
-  	<time datetime="2017-08-03T12:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/cssstudy2/">总结CSS中的单位</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/cssstudy1/" class="archive-article-date">
-  	<time datetime="2017-08-01T15:45:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/cssstudy1/">总结CSS基础中的一些小坑</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -585,9 +418,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
