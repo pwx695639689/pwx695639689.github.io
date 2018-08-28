@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>总结CSS基础中的一些小坑 | Chronos的博客</title>
+  <title>Archives: 2017/10 | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS虽然很有趣，入门也容易，但对于前端菜鸟、初学者来说，还是有一些小坑是无法避免的，这些小坑相对而言更需要去积累和理解，也是比较容易忽略的一些问题，以至于学到后来，因为没有搞定这些小坑而延伸出许多“大坑”，相当影响学习效率。">
-<meta name="keywords" content="CSS,前端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="总结CSS基础中的一些小坑">
-<meta property="og:url" content="http://chronosblog.top/2017/08/01/cssstudy1/index.html">
+  <meta name="description" content="计算机科学与技术专业，主要写前端。">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chronos的博客">
+<meta property="og:url" content="http://chronosblog.top/archives/2017/10/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="CSS虽然很有趣，入门也容易，但对于前端菜鸟、初学者来说，还是有一些小坑是无法避免的，这些小坑相对而言更需要去积累和理解，也是比较容易忽略的一些问题，以至于学到后来，因为没有搞定这些小坑而延伸出许多“大坑”，相当影响学习效率。">
+<meta property="og:description" content="计算机科学与技术专业，主要写前端。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-8-1/49283391.jpg">
-<meta property="og:updated_time" content="2017-09-24T14:12:16.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="总结CSS基础中的一些小坑">
-<meta name="twitter:description" content="CSS虽然很有趣，入门也容易，但对于前端菜鸟、初学者来说，还是有一些小坑是无法避免的，这些小坑相对而言更需要去积累和理解，也是比较容易忽略的一些问题，以至于学到后来，因为没有搞定这些小坑而延伸出许多“大坑”，相当影响学习效率。">
-<meta name="twitter:image" content="http://otqmaanbo.bkt.clouddn.com/17-8-1/49283391.jpg">
+<meta name="twitter:title" content="Chronos的博客">
+<meta name="twitter:description" content="计算机科学与技术专业，主要写前端。">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -171,168 +168,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-cssstudy1" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      总结CSS基础中的一些小坑
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/07/js-study-1/" class="archive-article-date">
+  	<time datetime="2017-10-07T02:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/07/js-study-1/">Javascript总结笔记之基本概念</a>
     </h1>
   
 
-        
-        <a href="/2017/08/01/cssstudy1/" class="archive-article-date">
-  	<time datetime="2017-08-01T15:45:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>CSS虽然很有趣，入门也容易，但对于前端菜鸟、初学者来说，还是有一些小坑是无法避免的，这些小坑相对而言更需要去积累和理解，也是比较容易忽略的一些问题，以至于学到后来，因为没有搞定这些小坑而延伸出许多“大坑”，相当影响学习效率。</p>
-<a id="more"></a>
-<h2 id="一、CSS选择器"><a href="#一、CSS选择器" class="headerlink" title="一、CSS选择器"></a>一、CSS选择器</h2><p>CSS中的选择器大体分为五大类：</p>
-<ul>
-<li>基本选择器</li>
-<li>关系选择器</li>
-<li>伪类选择器</li>
-<li>伪元素选择器</li>
-<li>属性选择器</li>
-</ul>
-<p>这五大类里每一类又分别有很多类型的选择器，可以说是一个庞大的“选择器”家族。然而，在实际使用过程当中，用的最多的其实也就那么几种而已，比如标签选择器，类选择器，ID选择器等。那么，我们在需要使用选择器的时候，优先考虑的究竟是什么呢？这时候有的同学肯定会疑惑，难道不是哪个更方便就用哪个吗？</p>
-<p>其实不然。我们从零学习前端开发，最终的目标实际上是做一个合格的开发者，所以优先考虑的肯定是“合格”二字。所以，在使用选择器的时候，我们要考虑<strong>选择器优化</strong>这个概念。</p>
-<p>对于浏览器来说，解析每种选择器所耗费的时间并不一样，那么如何才能写出最优选择器呢？</p>
-<p>(引用内容来源于IMWeb的技术文章)</p>
-<blockquote>
-<p>根据网站效率专家<a href="http://stevesouders.com" target="_blank" rel="external">Steve Souders</a>指出，各种CSS选择器的效率由高到低排序如下：</p>
-<ul>
-<li>id选择器</li>
-<li>类选择器</li>
-<li>标签选择器</li>
-<li>相邻选择器</li>
-<li>子选择器</li>
-<li>后代选择器</li>
-<li>通配符选择器</li>
-<li>属性选择器</li>
-<li>伪类选择器</li>
-</ul>
-<p>假如现在需要对一个p元素来使用选择器：</p>
-<p><code>&lt;p id=&quot;text&quot; class=&quot;red&quot;&gt;这是一个段落&lt;p&gt;</code></p>
-<p>我们可以通过很多方法选中它，标签选择器，类选择器，id选择器都能做到，但按照执行效率来说，id选择器是最佳的，其次是类选择器，然后是元素选择，最后才是属性选择器。</p>
-</blockquote>
-<p>这里有一个小例子，作为一个前端新手，我刚开始练习CSS的时候，习惯在例子中使用了通用选择器“*”来清除margin和padding：</p>
-<p><code>*{margin: 0; padding: 0;}</code></p>
-<p>直到后来，看到别人清除浏览器默认样式的时候都写一大长串，甚至引入一个专门的CSS文件来用于清除默认样式，我十分不解，用通用选择器岂不是更方便？</p>
-<p>后来才明白，这样做反而是最没有效率的！原因在于浏览器匹配文档中所有的元素后会分别向上逐级匹配，一直到文档的根节点才作罢，这样匹配的开销是非常大的。所以，应当避免使用通用选择器。</p>
-<p>还有一个问题很关键：<strong>浏览器又是如何识别你写的选择器的呢？</strong></p>
-<p>实际上，<strong>浏览器读取你的选择器，遵循的原则是从选择器的右边到左边读取。也就是说，顺序是从右到左。</strong></p>
-<p>所以当你给一个元素写了相当多的选择器，浏览器会从右到左来寻找，显然路径链会影响效率。因此，建议选择器的层级最多不要超过四层。</p>
-<p>综上所述，在使用选择器的时候，其实要做一个综合考虑，每一次都用最优解来使用，这样才能提高代码的效率。</p>
-<h2 id="二、CSS优先级"><a href="#二、CSS优先级" class="headerlink" title="二、CSS优先级"></a>二、CSS优先级</h2><p>CSS中的优先级大概如下：</p>
-<p><strong>！important &gt; style &gt; id选择器 &gt; 类选择器 &gt; 元素选择器 &gt; “*” &gt; 浏览器默认 &gt; 继承</strong></p>
-<p>这样的优先级比较方式比较笼统，所以还有一种比较普遍的简化方式：</p>
-<p>我们把每一个选择器都用一个数字（权重值）来表示，元素选择器用个位数，类选择器用十位数，id选择器用百位数。</p>
-<table>
-<thead>
-<tr>
-<th>选择器</th>
-<th>权重值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id选择器</td>
-<td>100</td>
-</tr>
-<tr>
-<td>类选择器</td>
-<td>10</td>
-</tr>
-<tr>
-<td>元素选择器</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>于是，权重的计算我们可以总结如下图所示：</p>
-<p><img src="http://otqmaanbo.bkt.clouddn.com/17-8-1/49283391.jpg" alt=""></p>
-<p>其中，没选中代表的就是继承来的属性。</p>
-<p>知道了选择器的优先级，那么元素最终的样式究竟是如何得出的呢？</p>
-<p>我们知道，一个元素的样式来源有：</p>
-<ul>
-<li>继承自父级元素的样式</li>
-<li>浏览器的默认样式</li>
-<li>元素自己声明的样式</li>
-</ul>
-<p>最终应用的样式就是通过一系列复杂的计算体系而得到的。而这里面有几个值需要注意。</p>
-<h4 id="应用值（used-value）、初始值（initial-value）、（inherit-value）"><a href="#应用值（used-value）、初始值（initial-value）、（inherit-value）" class="headerlink" title="应用值（used value）、初始值（initial value）、（inherit value）"></a>应用值（used value）、初始值（initial value）、（inherit value）</h4><p>最终应用的样式称之为应用值，如果一个元素声明了样式，那么应用值就是这个声明的样式，但如果没有声明，那应用值又是什么？</p>
-<p>这里还包括了两个特殊的值：<strong>继承值</strong>和<strong>初始值</strong>。</p>
-<p>一个属性默认是继承的，我们得到的它的父元素的同属性的应用值就叫做继承值。如果属性是默认不继承的，那么就会有一个初始值，这个初始值实际上就是一个默认的值，比如width的初始值是auto。</p>
-<h2 id="三、CSS重置"><a href="#三、CSS重置" class="headerlink" title="三、CSS重置"></a>三、CSS重置</h2><p>有关CSS重置之前已经提到过，就是清除浏览器默认样式。</p>
-<p>对于不同的浏览器，其默认样式都是不一样的，而且默认样式有时候实际上就如同画蛇添足一般，清除是非常必要的。</p>
-<p>CSS重置分为两种，一种是<strong>纠正重置</strong>，一种是<strong>清零重置</strong></p>
-<p>纠正重置，就如字面意思，因为浏览器默认样式有差异的缘故，我们需要来消除这些差异，让页面在不同的浏览器中看起来一致。开源的normalize.css就可以做到这一点，这里不再赘述。</p>
-<p>清零重置，就是彻底的去除默认样式，这个可以根据自己的需求来写，也可以参考一些文档，例如：<a href="http://meyerweb.com" target="_blank" rel="external">Eric Meyer’s Reset CSS 2.0</a></p>
-<hr>
-<p>我的个人Blog：<a href="http://chronosblog.top">chronosblog.top</a><br>我的微信公众号：runtustory</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/75849254.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://otqmaanbo.bkt.clouddn.com/17-7-29/28425727.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -345,111 +226,17 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/08/01/cssstudy1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/08/03/cssstudy2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          总结CSS中的单位
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/06/26/movie-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《色戒》：引刀成一快 不负少年头</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -480,8 +267,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
