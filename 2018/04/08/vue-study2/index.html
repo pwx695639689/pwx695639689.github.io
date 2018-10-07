@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>《嫌疑人X的献身》：一场精心设计的悲伤告白 | Chronos的博客</title>
+  <title>Vue知识点总结（二）组件与生命周期 | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="《嫌疑人X的献身》是东野圭吾系列作品中我最喜欢的一个故事。除了嫌疑人之外，我还喜欢《白夜行》。但《白夜行》和《嫌疑人X的献身》二者区别很大，只要东野圭吾想写，或许能写千千万万个《白夜行》，但《嫌疑人X的献身》，恐怕仅此一个，独树一帜。">
-<meta name="keywords" content="影评">
+  <meta name="description" content="vue知识点总结">
+<meta name="keywords" content="前端,Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《嫌疑人X的献身》：一场精心设计的悲伤告白">
-<meta property="og:url" content="http://chronosblog.top/2017/05/02/movie-1/index.html">
+<meta property="og:title" content="Vue知识点总结（二）组件与生命周期">
+<meta property="og:url" content="http://chronosblog.top/2018/04/08/vue-study2/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="《嫌疑人X的献身》是东野圭吾系列作品中我最喜欢的一个故事。除了嫌疑人之外，我还喜欢《白夜行》。但《白夜行》和《嫌疑人X的献身》二者区别很大，只要东野圭吾想写，或许能写千千万万个《白夜行》，但《嫌疑人X的献身》，恐怕仅此一个，独树一帜。">
+<meta property="og:description" content="vue知识点总结">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/24680348.jpg">
-<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/90658259.jpg">
-<meta property="og:updated_time" content="2017-10-11T04:03:16.394Z">
+<meta property="og:updated_time" content="2018-10-07T08:59:29.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《嫌疑人X的献身》：一场精心设计的悲伤告白">
-<meta name="twitter:description" content="《嫌疑人X的献身》是东野圭吾系列作品中我最喜欢的一个故事。除了嫌疑人之外，我还喜欢《白夜行》。但《白夜行》和《嫌疑人X的献身》二者区别很大，只要东野圭吾想写，或许能写千千万万个《白夜行》，但《嫌疑人X的献身》，恐怕仅此一个，独树一帜。">
-<meta name="twitter:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/24680348.jpg">
+<meta name="twitter:title" content="Vue知识点总结（二）组件与生命周期">
+<meta name="twitter:description" content="vue知识点总结">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -176,20 +173,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-movie-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-study2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      《嫌疑人X的献身》：一场精心设计的悲伤告白
+      Vue知识点总结（二）组件与生命周期
     </h1>
   
 
         
-        <a href="/2017/05/02/movie-1/" class="archive-article-date">
-  	<time datetime="2017-05-02T02:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-02</time>
+        <a href="/2018/04/08/vue-study2/" class="archive-article-date">
+  	<time datetime="2018-04-08T05:05:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
 </a>
         
       </header>
@@ -197,25 +194,60 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>《嫌疑人X的献身》是东野圭吾系列作品中我最喜欢的一个故事。除了嫌疑人之外，我还喜欢《白夜行》。但《白夜行》和《嫌疑人X的献身》二者区别很大，只要东野圭吾想写，或许能写千千万万个《白夜行》，但《嫌疑人X的献身》，恐怕仅此一个，独树一帜。</p>
+<p>vue知识点总结</p>
 <a id="more"></a>
-<h2 id="《嫌疑人X的献身》，一场精心设计的悲伤告白"><a href="#《嫌疑人X的献身》，一场精心设计的悲伤告白" class="headerlink" title="《嫌疑人X的献身》，一场精心设计的悲伤告白"></a>《嫌疑人X的献身》，一场精心设计的悲伤告白</h2><p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/24680348.jpg" alt=""></p>
-<p>《嫌疑人X的献身》是东野圭吾系列作品中我最喜欢的一个故事。除了嫌疑人之外，我还喜欢《白夜行》。<br>但《白夜行》和《嫌疑人X的献身》二者区别很大，只要东野圭吾想写，或许能写千千万万个《白夜行》，但《嫌疑人X的献身》，恐怕仅此一个，独树一帜。</p>
-<p>东野圭吾的作品有一个特点，他非常喜欢在开头就告诉你真相，但即便如此，你仍然还是会沉浸在故事当中欲罢不能，而最后更是一定能够收获出乎意料的惊喜。</p>
-<p>《嫌疑人X的献身》就是这样一个故事。这个故事最精彩的地方，不是案件的推理过程，而是石神的“献身”。</p>
-<p>中版电影改编似乎获得了作者东野圭吾的认可，但作为一个书粉，看完电影之后，却只能给这部电影打60分。</p>
-<p>首先来说说剧本，故事基本是按照原著来的，所有的改动基本都是围绕着“本土化改编”这个目的，让它看上去更像是发生在中国的一个故事，但实际上改编的力度还是不够，很多地方看上去还是十分违和，例如唐川的某些台词。或许正因为这样，使得故事显得太“浅”，从而使剧本凸显出最大的问题——一切都浮于表面，讲的不够深入。看过原著的朋友应该都有这种感觉，电影就好像是中规中矩地还原了一遍原著，而且很多地方的细节没有原著那么到位，深入。</p>
-<p>再来说说人物，中版改编最大的亮点应该就是双男主这个设定，凸显二个高智商男主之间的争雄，但很可惜的是，两个角色都跑偏了。唐川一味的耍帅，像是偶像剧里的警察，丝毫看不出一点物理学家的样子，最后破案居然是靠开挂灵光一闪。而石泓则是从开头就一直压抑，克制，可最后却没有了欲扬先抑的效果，最后的爆发如同隔靴搔痒。实际上两个演员都没有抓住这两个人物的精髓之处，张鲁一的演技固然厉害，但“匠气”不足，看上去太像是张鲁一演的石泓，而不是石泓本人，最后那场“呕出了灵魂”的戏，实在是太草率了。而林心如……她真的老了，最后和石泓见面的那场哭戏，老让我以为她要说：“皇阿玛，快救我！”。</p>
-<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/90658259.jpg" alt=""></p>
-<p>曾经看过小说之后，觉得靖子最后不应该承认真相。靖子这样一个特别的女人，她既然已经明白了石神的良苦用心，那为什么还要剥夺石神最后的一丝希望？也有可能她并不懂石神，或者是并不敢相信会有一个人爱她爱到这般地步，毫无任何逻辑，没有任何理由。</p>
-<p>我觉得，整个故事对于石神来说，都是残忍的。</p>
-<p>“解开一道题和设置一道别人解不开的题，哪个更难？”</p>
-<p>这个问题最后好像是唐川赢了，我一时不知道他为什么会赢，就凭他是智商不输给石神的天才，就凭他了解石神？后来电影的最后一个镜头给了我答案。</p>
-<p>唐川迈开了步子，走向了光。光是什么？光明，正义。这个故事有一个最大的Bug，一切都限定在正义这个前提之下，所以，石神必输无疑。</p>
-<p>石神触犯了底线，那个死去的流浪汉，就是让石神坠入深渊的充分必要条件。</p>
-<p>可是，石神自己不知道吗？他很明白。驱使他献身的这股强大力量，就是爱情。</p>
-<p>明知这一脚踩下去会万劫不复，石神毫无畏惧。</p>
-<p>所以，这个问题难吗？难。</p>
+<h3 id="组件基础"><a href="#组件基础" class="headerlink" title="组件基础"></a>组件基础</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 定义一个名为 button-counter 的新组件</div><div class="line">Vue.component(&apos;button-counter&apos;, &#123;</div><div class="line">  data: function () &#123;</div><div class="line">    return &#123;</div><div class="line">      count: 0</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  template: &apos;&lt;button v-on:click=&quot;count++&quot;&gt;You clicked me &#123;&#123; count &#125;&#125; times.&lt;/button&gt;&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>组件是可复用的 Vue 实例，且带有一个名字：在这个例子中是 <button-counter>。我们可以在一个通过 new Vue 创建的 Vue 根实例中，把这个组件作为自定义元素来使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;components-demo&quot;&gt;</div><div class="line">  &lt;button-counter&gt;&lt;/button-counter&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></button-counter></p>
+<p>一个组件也拥有data、methods、computed、watch这些属性，但一个组件里，data必须是一个函数，data里的数据必须通过return返回。</p>
+<p>一个组件必须只能有一个根元素，所以需要将组件包裹在一个父级的div容器里。</p>
+<h3 id="组件的注册"><a href="#组件的注册" class="headerlink" title="组件的注册"></a>组件的注册</h3><h4 id="组件的全局注册"><a href="#组件的全局注册" class="headerlink" title="组件的全局注册"></a>组件的全局注册</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.component(&apos;my-component-name&apos;, &#123;</div><div class="line">  // ... 选项 ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="组件的局部注册"><a href="#组件的局部注册" class="headerlink" title="组件的局部注册"></a>组件的局部注册</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import ComponentA from &apos;./ComponentA.vue&apos;</div><div class="line"></div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    ComponentA</div><div class="line">  &#125;,</div><div class="line">  // ...</div><div class="line">&#125;</div><div class="line"></div><div class="line">new Vue(&#123;</div><div class="line">  el: &apos;#app&apos;,</div><div class="line">  components: &#123;</div><div class="line">    &apos;component-a&apos;: ComponentA,</div><div class="line">    &apos;component-b&apos;: ComponentB</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="组件模板"><a href="#组件模板" class="headerlink" title="组件模板"></a>组件模板</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//以VUE为后缀名的文件，有如下模板</div><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h3 id="父子组件传值"><a href="#父子组件传值" class="headerlink" title="父子组件传值"></a>父子组件传值</h3><p>父组件向子组件传值，是通过属性来传递的。prop是你可以在组件上注册的一些自定义特性，当一个值传递给一个prop特性的时候，它就变成了那个组件实例上的一个属性。当prop注册之后，就可以把数据作为一个自定义特性传递进来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//父组件发送数据</div><div class="line">&lt;blog-post title=&quot;My journey with Vue&quot;&gt;&lt;/blog-post&gt;</div><div class="line">&lt;blog-post title=&quot;Blogging with Vue&quot;&gt;&lt;/blog-post&gt;</div><div class="line">&lt;blog-post title=&quot;Why Vue is so fun&quot;&gt;&lt;/blog-post&gt;</div><div class="line">//子组件接受数据</div><div class="line">Vue.component(&apos;blog-post&apos;, &#123;</div><div class="line">  props: [&apos;title&apos;],</div><div class="line">  template: &apos;&lt;h3&gt;&#123;&#123; title &#125;&#125;&lt;/h3&gt;&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>子组件向父组件传值，是通过事件触发的方式来传递的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.绑定</div><div class="line">   methods:&#123;</div><div class="line">    handleEvent:function(msg)&#123;&#125;</div><div class="line">   &#125;</div><div class="line">   &lt;son @customEvent=&quot;handleEvent&quot;&gt;&lt;/son&gt;</div><div class="line">2.触发</div><div class="line">子组件内部：</div><div class="line">this.$emit(‘customEvent’,100);</div></pre></td></tr></table></figure></p>
+<p>ref是可以让父组件得到子组件中的数据和方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.指定ref属性</div><div class="line">   &lt;son ref=&quot;mySon&quot;&gt;&lt;/son&gt;</div><div class="line"></div><div class="line">2.根据ref得到子组件实例</div><div class="line">   this.$refs.mySon</div></pre></td></tr></table></figure></p>
+<p>parent可以得到父组件的实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.$parent得到父组件的实例</div></pre></td></tr></table></figure></p>
+<h3 id="非父子组件间通信"><a href="#非父子组件间通信" class="headerlink" title="非父子组件间通信"></a>非父子组件间通信</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">兄弟组件通信:</div><div class="line">    1.var bus = new Vue();</div><div class="line">    2.接收方</div><div class="line">    bus.$on(&apos;eventName&apos;,function(msg)&#123;&#125;)</div><div class="line">    3.发送方</div><div class="line">    bus.$emit(&apos;eventName&apos;,123);</div></pre></td></tr></table></figure>
+<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">创建和使用</div><div class="line"> Vue.directive(&apos;change&apos;,&#123;</div><div class="line">    bind:function(el,bindings)&#123;</div><div class="line">    //首次调用</div><div class="line">    &#125;,</div><div class="line">    update:function(el,bindings)&#123;</div><div class="line">    //只要是有数据变化，都会调用</div><div class="line">    &#125;,</div><div class="line">    unbind:function()&#123;</div><div class="line">    //解绑</div><div class="line">    &#125;</div><div class="line"> &#125;)</div><div class="line"> &lt;any v-change=&quot;count&quot;&gt;&lt;/any&gt;</div></pre></td></tr></table></figure>
+<p>钩子函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">一个指令定义对象可以提供如下几个钩子函数 (均为可选)：</div><div class="line"></div><div class="line">bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。</div><div class="line"></div><div class="line">inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</div><div class="line"></div><div class="line">update：被绑定于元素所在的模板更新时调用，而无论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新。</div><div class="line"></div><div class="line">componentUpdated：被绑定元素所在模板完成一次更新周期时调用。</div><div class="line"></div><div class="line">unbind：只调用一次，指令与元素解绑时调用。</div><div class="line"></div><div class="line">接下来我们来看一下钩子函数的参数 (即 el、binding、vnode 和 oldVnode)。</div></pre></td></tr></table></figure></p>
+<p>自定义指令中传递的三个参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">el: 指令所绑定的元素，可以用来直接操作DOM。</div><div class="line">binding: 一个对象，包含指令的很多信息。</div><div class="line">vnode: Vue编译生成的虚拟节点。</div></pre></td></tr></table></figure></p>
+<h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">1.创建</div><div class="line">   Vue.filter(</div><div class="line">    &apos;myFilter&apos;,</div><div class="line">    function(myInput)&#123;</div><div class="line">       //myInput是在调用过滤器时，管道前表达式执行的结果</div><div class="line">       //针对myInput，按照业务需求做处理</div><div class="line">       //返回</div><div class="line">       return &apos;处理后的结果&apos;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">2.使用</div><div class="line">    &lt;any&gt;&#123;&#123;expression | myFilter&#125;&#125;&lt;/any&gt;</div></pre></td></tr></table></figure>
+<p>在调用过滤器的时候，完成参数的发送和接受<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.发送</div><div class="line">&lt;any&gt;&#123;&#123;expression | myFilter(参数1，参数2)&#125;&#125;&lt;/any&gt;</div><div class="line"></div><div class="line">2.接受</div><div class="line">Vue.filter(&apos;myFilter&apos;,function(myInput，参数1，参数2)&#123;</div><div class="line">    return &apos;处理后的结果&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h3><p>什么是vue的生命周期</p>
+<p>指的是实例从创建到销毁的过程，就是生命周期。也就是从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
+<p>生命周期的作用</p>
+<p>生命周期中有多个钩子函数，让我们在控制整个Vue实例的过程时更容易形成好的逻辑。</p>
+<p>总共有八个阶段也就是八个钩子函数</p>
+<p>创建前/后, 载入前/后,更新前/后,销毁前/销毁后</p>
+<p>页面第一次加载的时候会触发beforeCreate, created, beforeMount, mounted 这几个钩子，DOM 渲染在 mounted 中就完成</p>
+<p>每个周期的具体场景</p>
+<ol>
+<li><p>beforeCreate</p>
+<p>在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。</p>
+</li>
+<li><p>created</p>
+<p>实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：<br>数据观测(data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。</p>
+</li>
+<li><p>beforeMount</p>
+<p>在挂载开始之前被调用：相关的 render 函数首次被调用。</p>
+</li>
+<li><p>mounted</p>
+<p>el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</p>
+</li>
+<li><p>beforeUpdate</p>
+<p>数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。</p>
+</li>
+<li><p>updated</p>
+<p>由于数据更改导致的虚拟 DOM，重新渲染和打补丁，在这之后会调用该钩子。</p>
+<p>当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</p>
+</li>
+<li><p>beforeDestroy</p>
+<p>实例销毁之前调用。在这一步，实例仍然完全可用。</p>
+</li>
+<li><p>destroyed</p>
+<p>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。 该钩子在服务器端渲染期间不被调用。</p>
+</li>
+</ol>
 
       
 
@@ -260,7 +292,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">影评</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -272,7 +308,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/杂文/" class="article-tag-list-link color3">杂文</a>
+        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
         		</li>
       		
 		</ul>
@@ -327,7 +363,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/05/02/movie-1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2018/04/08/vue-study2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,15 +377,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/10/movie-2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/17/diary-2018-4-17/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          《欢乐颂》里的真实与意淫
+          一千零一面镜子
         
       </div>
     </a>
   
+  
+    <a href="/2018/04/06/vue-study1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue知识点总结（一）基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
