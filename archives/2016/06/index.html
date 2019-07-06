@@ -6,49 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>CSS中的布局详解笔记（三）：flex布局 | Chronos的博客</title>
+  <title>Archives: 2016/6 | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS中的flex布局">
-<meta name="keywords" content="CSS,前端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS中的布局详解笔记（三）：flex布局">
-<meta property="og:url" content="http://chronosblog.top/2017/08/10/cssstudy5/index.html">
+  <meta name="description" content="傻白甜政治委员会及白莲花研究">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chronos的博客">
+<meta property="og:url" content="http://chronosblog.top/archives/2016/06/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="CSS中的flex布局">
+<meta property="og:description" content="傻白甜政治委员会及白莲花研究">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-a4bf00230ce8bd9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-a7af36c90bf4034d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-02abf2a6aeaea1b8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-4a16ec1c831bb6d6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-ef98e9ccd2c99801.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-0ae87b0639494f20.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-0fb1cff26ce8291c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-08b1453c4b8d92d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-2a8767dbab96dce5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-8091752313fe994a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-1f7e9717f59c23d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-f66e10017ce4628b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-df9b7f12198375b2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-85704aa58fc51da4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-b7d0d66ae6957652.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-159183ce4b1d161e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-69fbf1cd6113e8ae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-776510497e0726dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-6af1d4feb6c69dad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-9e85a709f6e24ed9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-13c350d1f61e96f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-523653cc838b343c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-faf61b727cbe5378.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-b11f594903e7f43c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-09-30T16:00:35.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS中的布局详解笔记（三）：flex布局">
-<meta name="twitter:description" content="CSS中的flex布局">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Chronos的博客">
+<meta name="twitter:description" content="傻白甜政治委员会及白莲花研究">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -198,313 +168,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-cssstudy5" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      CSS中的布局详解笔记（三）：flex布局
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/06/18/novel-2/" class="archive-article-date">
+  	<time datetime="2016-06-18T12:24:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-18</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/06/18/novel-2/">《意识保镖》</a>
     </h1>
   
 
-        
-        <a href="/2017/08/10/cssstudy5/" class="archive-article-date">
-  	<time datetime="2017-08-10T11:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>CSS中的flex布局</p>
-<a id="more"></a>
-<p>Flex布局又名弹性布局，相比float+position布局，具有很强大的灵活性，而且目前已经得到了所有浏览器的兼容。</p>
-<p>个人认为flex布局非常灵活好用，所以这里参考了阮一峰老师的flex教程以及NEXT课程中的文档，把flex布局的所有属性知识点自己动手实现一遍并总结。</p>
-<h3 id="Flex布局的使用"><a href="#Flex布局的使用" class="headerlink" title="Flex布局的使用"></a>Flex布局的使用</h3><p>如果想要使用Flex布局，首先需要给容器指定Flex布局。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display: flex;</div><div class="line">display: inline-flex; //行内元素也可使用</div><div class="line">display: -webkit-flex //Webkit浏览器内核需要加上前缀</div></pre></td></tr></table></figure></p>
-<p>在使用了flex布局之后，float，clear，vertical-align将失效。</p>
-<h3 id="Flex布局的基本概念"><a href="#Flex布局的基本概念" class="headerlink" title="Flex布局的基本概念"></a>Flex布局的基本概念</h3><p>flex布局中，有两个基本概念：</p>
-<ul>
-<li>容器（flex container）</li>
-<li>项目（flex item）</li>
-</ul>
-<p>如图所示（图片来源网络）：<br><img src="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>由图可见，容器中有两根主轴：</p>
-<ul>
-<li>水平主轴（main axis）<ul>
-<li>开始位置（main start）</li>
-<li>结束位置（main end） </li>
-</ul>
-</li>
-<li>垂直交叉轴（cross axis）<ul>
-<li>开始位置（cross start）</li>
-<li>结束位置（cross end）</li>
-</ul>
-</li>
-</ul>
-<p>在容器中，项目默认沿着主轴排列，单个项目占据主轴空间叫做（main size），占据的交叉轴空间叫做（cross size）。</p>
-<h3 id="容器（flex-container）的属性"><a href="#容器（flex-container）的属性" class="headerlink" title="容器（flex container）的属性"></a>容器（flex container）的属性</h3><p>容器属性有6个：</p>
-<h4 id="1-flex-direction"><a href="#1-flex-direction" class="headerlink" title="1. flex-direction"></a>1. flex-direction</h4><ul>
-<li>flex-direction决定了主轴的方向，也就是item排列的方向，有4个值：<ul>
-<li>row（默认值）：主轴为水平方向，左端为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>row-reverse：主轴为水平方向，右端为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-a4bf00230ce8bd9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-<li>column：主轴为垂直方向，上沿为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-a7af36c90bf4034d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>column-reverse：主轴为垂直方向，下沿为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-02abf2a6aeaea1b8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h4 id="2-flex-wrap"><a href="#2-flex-wrap" class="headerlink" title="2. flex-wrap"></a>2. flex-wrap</h4><ul>
-<li>flex-wrap属性是规定当一条轴线排列不下item的时候，该如何换行。（item在默认情况下是按照轴线排列成一条线），有三个值：<ul>
-<li>nowrap（默认值）：不换行<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>wrap：换行，第一行在上方<br><img src="http://upload-images.jianshu.io/upload_images/3081331-4a16ec1c831bb6d6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>wrap-reverse：换行，第一行在下方<br><img src="http://upload-images.jianshu.io/upload_images/3081331-ef98e9ccd2c99801.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-</ul>
-<h4 id="3-flex-flow"><a href="#3-flex-flow" class="headerlink" title="3.flex-flow"></a>3.flex-flow</h4><ul>
-<li>flex-flow是前两种属性的简写方式，可以写成如下形式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="4-justify-content"><a href="#4-justify-content" class="headerlink" title="4. justify-content"></a>4. justify-content</h4><ul>
-<li>justify-content定义了item在主轴上的对齐方式，可能取5个值<ul>
-<li>flex-start（默认值）：左对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：右对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-0ae87b0639494f20.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：居中<br><img src="http://upload-images.jianshu.io/upload_images/3081331-0fb1cff26ce8291c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-between：两端对齐，项目之间间隔都相等<br><img src="http://upload-images.jianshu.io/upload_images/3081331-08b1453c4b8d92d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-around：每个项目两侧的间隔相等。所以项目之间的间隔比项目与边框的间隔大一倍。<br><img src="http://upload-images.jianshu.io/upload_images/3081331-2a8767dbab96dce5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-</ul>
-<h4 id="5-alien-items"><a href="#5-alien-items" class="headerlink" title="5. alien-items"></a>5. alien-items</h4><p>alien-items定义item在交叉轴上如何对齐（此时交叉轴方向为从上至下），有5个值：</p>
-<ul>
-<li>flex-start：交叉轴的起点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-8091752313fe994a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：交叉轴的终点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-1f7e9717f59c23d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：交叉轴的中点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-f66e10017ce4628b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>baseline：项目的第一行文字的基线对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-df9b7f12198375b2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>这里有一个问题：基线（base line）并不是汉字文字的下端沿，而是英文字母“x”的下端沿。</li>
-<li>stretch（默认值）：如果item未设置高度或者设置成auto，将占满整个容器宽度<br><img src="http://upload-images.jianshu.io/upload_images/3081331-85704aa58fc51da4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h4 id="6-align-content"><a href="#6-align-content" class="headerlink" title="6.align-content"></a>6.align-content</h4><p>align-content定义了多跟轴线的对齐方式，如果item只有一根轴线，该属性不起作用，有6个值：</p>
-<ul>
-<li>flex-start：与交叉轴的起点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-b7d0d66ae6957652.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：与交叉轴的终点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-159183ce4b1d161e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：与交叉轴的中点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-69fbf1cd6113e8ae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-between：与交叉轴两端对齐，轴线之间间隔平均分布<br><img src="http://upload-images.jianshu.io/upload_images/3081331-776510497e0726dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-around：每根轴线两侧的间隔都相等，所以轴线之间的间隔比轴线与边框的间隔大一倍<br><img src="http://upload-images.jianshu.io/upload_images/3081331-6af1d4feb6c69dad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>stretch（默认值）：轴线占满整个交叉轴<br><img src="http://upload-images.jianshu.io/upload_images/3081331-9e85a709f6e24ed9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h3 id="item（子元素）的属性"><a href="#item（子元素）的属性" class="headerlink" title="item（子元素）的属性"></a>item（子元素）的属性</h3><p>item的属性有6个：</p>
-<ul>
-<li>order：定义item的排列顺序，数值越小排列越靠前，默认为0。<br>例如：<br>将所有item的order属性设置为6、5、4、3、2、1<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.item6&#123;</div><div class="line">    order：6</div><div class="line">&#125;</div><div class="line">//以此类推</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-13c350d1f61e96f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-grow：定义item的放大比例，默认为0，也就是如果有剩余空间，也不放大。<br>例如：<br>设置item1的flex-grow属性为2，其余为默认值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item1&#123;</div><div class="line">    flex-grow：2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-523653cc838b343c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-shrink：定义item的缩小比例，默认为1，也就是空间不足的时候，此item会缩小。<br>例如：<br>给item5设置了flex-shrink属性为0，其他item皆为默认值1，在空间不足的时候，它不缩小。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item &#123;</div><div class="line">    flex-shrink：0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-faf61b727cbe5378.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-basis:定义了在分配多余空间之前，项目占据的株洲空间。然后浏览器根据这个属性来计算主轴是否有多余的空间。默认值为auto，即item本来的大小。<br>例如，给item5设置flex-basis属性为100px：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item5 &#123;</div><div class="line">    flex-basis：150px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-b11f594903e7f43c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li><p>flex:这个属性是前几种属性的简写，默认值为0 1 auto ，后两个可选。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">item5 &#123;</div><div class="line">    flex : flex: 2 2 10%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>align-self：允许单个item和其他item有不一样的对齐方式，可覆盖align-items属性，默认值为auto，表示继承父元素的align-items属性，如果没有则等同于stretch。<br>和align-items类似，同样有以下几种值：</p>
-</li>
-<li>auto</li>
-<li>flex-start</li>
-<li>flex-end</li>
-<li>center</li>
-<li>baseline</li>
-<li>stretch</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">阮一峰Flex布局教程</a></li>
-</ul>
-<p>我的个人博客：<a href="http://chronosblog.top">http://chronosblog.top</a><br>我的微信公众号：runtustory</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://upload-images.jianshu.io/upload_images/3081331-5d346471a3e45015.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://upload-images.jianshu.io/upload_images/3081331-6c0ccfbd8e162dcf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">小说</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
+        			<a href="/categories/小说/" class="article-tag-list-link color3">小说</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/08/10/cssstudy5/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/08/15/cssstudy6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSS中的布局详解笔记（四）
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/08/07/cssstudy4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的布局详解笔记（二）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -535,8 +263,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

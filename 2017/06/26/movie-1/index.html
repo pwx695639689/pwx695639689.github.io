@@ -6,49 +6,53 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://chronosblog.top">
-  <title>CSS中的布局详解笔记（三）：flex布局 | Chronos的博客</title>
+  <title>《色戒》：引刀成一快 不负少年头 | Chronos的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS中的flex布局">
-<meta name="keywords" content="CSS,前端">
+  <meta name="description" content="《色戒》：引刀成一快 不负少年头">
+<meta name="keywords" content="影评">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS中的布局详解笔记（三）：flex布局">
-<meta property="og:url" content="http://chronosblog.top/2017/08/10/cssstudy5/index.html">
+<meta property="og:title" content="《色戒》：引刀成一快 不负少年头">
+<meta property="og:url" content="http://chronosblog.top/2017/06/26/movie-1/index.html">
 <meta property="og:site_name" content="Chronos的博客">
-<meta property="og:description" content="CSS中的flex布局">
+<meta property="og:description" content="《色戒》：引刀成一快 不负少年头">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-a4bf00230ce8bd9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-a7af36c90bf4034d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-02abf2a6aeaea1b8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-4a16ec1c831bb6d6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-ef98e9ccd2c99801.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-0ae87b0639494f20.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-0fb1cff26ce8291c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-08b1453c4b8d92d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-2a8767dbab96dce5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-8091752313fe994a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-1f7e9717f59c23d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-f66e10017ce4628b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-df9b7f12198375b2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-85704aa58fc51da4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-b7d0d66ae6957652.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-159183ce4b1d161e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-69fbf1cd6113e8ae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-776510497e0726dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-6af1d4feb6c69dad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-9e85a709f6e24ed9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-13c350d1f61e96f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-523653cc838b343c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-faf61b727cbe5378.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3081331-b11f594903e7f43c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-09-30T16:00:35.704Z">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/94117424.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/94125029.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/51784316.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/53935639.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/19656755.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/6795291.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/38592794.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/36536595.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/60333760.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/37325406.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/29905339.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/45831576.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/21184951.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/73963840.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/12488651.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/84375709.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/22729361.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/9981140.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/15153393.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/85299302.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/82986805.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/74448725.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/22432992.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/64475104.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/21864663.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/93766505.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/94235887.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/4673585.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/70814781.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/23091327.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/76095337.jpg">
+<meta property="og:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/24775855.jpg">
+<meta property="og:updated_time" content="2019-07-06T14:03:29.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS中的布局详解笔记（三）：flex布局">
-<meta name="twitter:description" content="CSS中的flex布局">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="《色戒》：引刀成一快 不负少年头">
+<meta name="twitter:description" content="《色戒》：引刀成一快 不负少年头">
+<meta name="twitter:image" content="http://otqmaanbo.bkt.clouddn.com/17-10-11/94117424.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Chronos的博客" type="application/atom+xml">
   
@@ -198,20 +202,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-cssstudy5" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-movie-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS中的布局详解笔记（三）：flex布局
+      《色戒》：引刀成一快 不负少年头
     </h1>
   
 
         
-        <a href="/2017/08/10/cssstudy5/" class="archive-article-date">
-  	<time datetime="2017-08-10T11:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-10</time>
+        <a href="/2017/06/26/movie-1/" class="archive-article-date">
+  	<time datetime="2017-06-26T07:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
 </a>
         
       </header>
@@ -219,120 +223,99 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>CSS中的flex布局</p>
+<p>《色戒》：引刀成一快 不负少年头</p>
 <a id="more"></a>
-<p>Flex布局又名弹性布局，相比float+position布局，具有很强大的灵活性，而且目前已经得到了所有浏览器的兼容。</p>
-<p>个人认为flex布局非常灵活好用，所以这里参考了阮一峰老师的flex教程以及NEXT课程中的文档，把flex布局的所有属性知识点自己动手实现一遍并总结。</p>
-<h3 id="Flex布局的使用"><a href="#Flex布局的使用" class="headerlink" title="Flex布局的使用"></a>Flex布局的使用</h3><p>如果想要使用Flex布局，首先需要给容器指定Flex布局。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display: flex;</div><div class="line">display: inline-flex; //行内元素也可使用</div><div class="line">display: -webkit-flex //Webkit浏览器内核需要加上前缀</div></pre></td></tr></table></figure></p>
-<p>在使用了flex布局之后，float，clear，vertical-align将失效。</p>
-<h3 id="Flex布局的基本概念"><a href="#Flex布局的基本概念" class="headerlink" title="Flex布局的基本概念"></a>Flex布局的基本概念</h3><p>flex布局中，有两个基本概念：</p>
-<ul>
-<li>容器（flex container）</li>
-<li>项目（flex item）</li>
-</ul>
-<p>如图所示（图片来源网络）：<br><img src="http://upload-images.jianshu.io/upload_images/3081331-46decd89fbf9f529.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>由图可见，容器中有两根主轴：</p>
-<ul>
-<li>水平主轴（main axis）<ul>
-<li>开始位置（main start）</li>
-<li>结束位置（main end） </li>
-</ul>
-</li>
-<li>垂直交叉轴（cross axis）<ul>
-<li>开始位置（cross start）</li>
-<li>结束位置（cross end）</li>
-</ul>
-</li>
-</ul>
-<p>在容器中，项目默认沿着主轴排列，单个项目占据主轴空间叫做（main size），占据的交叉轴空间叫做（cross size）。</p>
-<h3 id="容器（flex-container）的属性"><a href="#容器（flex-container）的属性" class="headerlink" title="容器（flex container）的属性"></a>容器（flex container）的属性</h3><p>容器属性有6个：</p>
-<h4 id="1-flex-direction"><a href="#1-flex-direction" class="headerlink" title="1. flex-direction"></a>1. flex-direction</h4><ul>
-<li>flex-direction决定了主轴的方向，也就是item排列的方向，有4个值：<ul>
-<li>row（默认值）：主轴为水平方向，左端为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>row-reverse：主轴为水平方向，右端为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-a4bf00230ce8bd9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-<li>column：主轴为垂直方向，上沿为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-a7af36c90bf4034d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>column-reverse：主轴为垂直方向，下沿为起点<br><img src="http://upload-images.jianshu.io/upload_images/3081331-02abf2a6aeaea1b8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h4 id="2-flex-wrap"><a href="#2-flex-wrap" class="headerlink" title="2. flex-wrap"></a>2. flex-wrap</h4><ul>
-<li>flex-wrap属性是规定当一条轴线排列不下item的时候，该如何换行。（item在默认情况下是按照轴线排列成一条线），有三个值：<ul>
-<li>nowrap（默认值）：不换行<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>wrap：换行，第一行在上方<br><img src="http://upload-images.jianshu.io/upload_images/3081331-4a16ec1c831bb6d6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>wrap-reverse：换行，第一行在下方<br><img src="http://upload-images.jianshu.io/upload_images/3081331-ef98e9ccd2c99801.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-</ul>
-<h4 id="3-flex-flow"><a href="#3-flex-flow" class="headerlink" title="3.flex-flow"></a>3.flex-flow</h4><ul>
-<li>flex-flow是前两种属性的简写方式，可以写成如下形式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="4-justify-content"><a href="#4-justify-content" class="headerlink" title="4. justify-content"></a>4. justify-content</h4><ul>
-<li>justify-content定义了item在主轴上的对齐方式，可能取5个值<ul>
-<li>flex-start（默认值）：左对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-5514ab8bca3c1f85.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：右对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-0ae87b0639494f20.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：居中<br><img src="http://upload-images.jianshu.io/upload_images/3081331-0fb1cff26ce8291c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-between：两端对齐，项目之间间隔都相等<br><img src="http://upload-images.jianshu.io/upload_images/3081331-08b1453c4b8d92d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-around：每个项目两侧的间隔相等。所以项目之间的间隔比项目与边框的间隔大一倍。<br><img src="http://upload-images.jianshu.io/upload_images/3081331-2a8767dbab96dce5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-</li>
-</ul>
-<h4 id="5-alien-items"><a href="#5-alien-items" class="headerlink" title="5. alien-items"></a>5. alien-items</h4><p>alien-items定义item在交叉轴上如何对齐（此时交叉轴方向为从上至下），有5个值：</p>
-<ul>
-<li>flex-start：交叉轴的起点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-8091752313fe994a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：交叉轴的终点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-1f7e9717f59c23d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：交叉轴的中点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-f66e10017ce4628b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>baseline：项目的第一行文字的基线对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-df9b7f12198375b2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>这里有一个问题：基线（base line）并不是汉字文字的下端沿，而是英文字母“x”的下端沿。</li>
-<li>stretch（默认值）：如果item未设置高度或者设置成auto，将占满整个容器宽度<br><img src="http://upload-images.jianshu.io/upload_images/3081331-85704aa58fc51da4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h4 id="6-align-content"><a href="#6-align-content" class="headerlink" title="6.align-content"></a>6.align-content</h4><p>align-content定义了多跟轴线的对齐方式，如果item只有一根轴线，该属性不起作用，有6个值：</p>
-<ul>
-<li>flex-start：与交叉轴的起点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-b7d0d66ae6957652.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>flex-end：与交叉轴的终点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-159183ce4b1d161e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>center：与交叉轴的中点对齐<br><img src="http://upload-images.jianshu.io/upload_images/3081331-69fbf1cd6113e8ae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-between：与交叉轴两端对齐，轴线之间间隔平均分布<br><img src="http://upload-images.jianshu.io/upload_images/3081331-776510497e0726dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>space-around：每根轴线两侧的间隔都相等，所以轴线之间的间隔比轴线与边框的间隔大一倍<br><img src="http://upload-images.jianshu.io/upload_images/3081331-6af1d4feb6c69dad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>stretch（默认值）：轴线占满整个交叉轴<br><img src="http://upload-images.jianshu.io/upload_images/3081331-9e85a709f6e24ed9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-</ul>
-<h3 id="item（子元素）的属性"><a href="#item（子元素）的属性" class="headerlink" title="item（子元素）的属性"></a>item（子元素）的属性</h3><p>item的属性有6个：</p>
-<ul>
-<li>order：定义item的排列顺序，数值越小排列越靠前，默认为0。<br>例如：<br>将所有item的order属性设置为6、5、4、3、2、1<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.item6&#123;</div><div class="line">    order：6</div><div class="line">&#125;</div><div class="line">//以此类推</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-13c350d1f61e96f7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-grow：定义item的放大比例，默认为0，也就是如果有剩余空间，也不放大。<br>例如：<br>设置item1的flex-grow属性为2，其余为默认值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item1&#123;</div><div class="line">    flex-grow：2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-523653cc838b343c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-shrink：定义item的缩小比例，默认为1，也就是空间不足的时候，此item会缩小。<br>例如：<br>给item5设置了flex-shrink属性为0，其他item皆为默认值1，在空间不足的时候，它不缩小。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item &#123;</div><div class="line">    flex-shrink：0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-faf61b727cbe5378.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li>flex-basis:定义了在分配多余空间之前，项目占据的株洲空间。然后浏览器根据这个属性来计算主轴是否有多余的空间。默认值为auto，即item本来的大小。<br>例如，给item5设置flex-basis属性为100px：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.item5 &#123;</div><div class="line">    flex-basis：150px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3081331-b11f594903e7f43c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<ul>
-<li><p>flex:这个属性是前几种属性的简写，默认值为0 1 auto ，后两个可选。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">item5 &#123;</div><div class="line">    flex : flex: 2 2 10%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>align-self：允许单个item和其他item有不一样的对齐方式，可覆盖align-items属性，默认值为auto，表示继承父元素的align-items属性，如果没有则等同于stretch。<br>和align-items类似，同样有以下几种值：</p>
-</li>
-<li>auto</li>
-<li>flex-start</li>
-<li>flex-end</li>
-<li>center</li>
-<li>baseline</li>
-<li>stretch</li>
-</ul>
-<p>参考资料：</p>
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">阮一峰Flex布局教程</a></li>
-</ul>
-<p>我的个人博客：<a href="http://chronosblog.top">http://chronosblog.top</a><br>我的微信公众号：runtustory</p>
+<p>色戒是一部很好的电影。</p>
+<p>初次知道这片子，还是因为它的激情床戏。殊不知，这部片子用心看，情欲戏就显得一点儿也不色情了。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/94117424.jpg" alt=""></p>
+<p>何谓色|戒？这两个字在片名中就是分开的，其所表达的意思也是一样。</p>
+<p>色，代表色欲，色相。戒，代表戒指，戒备，戒心。</p>
+<p>这部电影，讲的就是一个关于色和戒的悲剧故事。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/94125029.jpg" alt=""></p>
+<p>影片开头，四个女人在打麻将。手里摸着牌，嘴里仍然不停地唠着磕，实则四人都是在互相套路。只不过麦太太与其他三人的目的与动机不同，因此整个片子下来，麦太太打牌的水平都没有长进多少。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/51784316.jpg" alt=""></p>
+<p>影片讲述的故事很简单，也不简单。六个青年大学生谋划了一场刺杀汪伪特务头目易先生的行动，让青年女学生王佳芝扮演阔太太打入易先生家中来创造机会，六个人皆是爱国青年，而这个组织的核心人物，除了假扮麦太太的王佳芝之外，还有一个邝裕民。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/53935639.jpg" alt=""></p>
+<p>而他和王佳芝，是互相有些爱慕的。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/19656755.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/6795291.jpg" alt=""></p>
+<p>但爱慕邝裕民的，还有六人中的赖秀金。</p>
+<p>再后来，因为王佳芝还是处子之身，为了避免易先生怀疑，其余五人商量先让王佳芝经历男女之事。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/38592794.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/36536595.jpg" alt=""></p>
+<p>这个时候，和王佳芝互相看对眼的邝裕民应该挺身而出，但最终的结果却是让梁润生来完成，理由非常荒诞，竟是他嫖过，有经验。</p>
+<p>男女之事，两个互相喜欢的人自己慢慢摸索不可以么？</p>
+<p>看赖秀金的表情和众人的反应，显然都不是那种性知识缺乏到以为接吻都能怀孕的地步。</p>
+<p>邝裕民似乎有些郁闷的在阳台上抽烟，他此时此刻没有站出来，我想是因为他心里的“爱国主义”在作祟。他作为这个组织的领导，尤其是正在行动当中，一切都得以行动为重，这种革命者崇高的荣誉感以及责任感在他的心中，远远大于对王佳芝那一丝丝朦胧的好感。</p>
+<p>而且，邝裕民并不懂王佳芝。</p>
+<p>到了后来，有了诸多经历的两人再次执行这个任务，邝裕民才发现王佳芝是那样的迷人。因此他吻了王佳芝。</p>
+<p>但他仍然不懂王佳芝，一点儿也不懂。</p>
+<p>王佳芝肩负重担，戴着面具执行着任务，而易先生，也像是一条蛇一样，除了在生理上完全占有了王佳芝 ，就连她的心，也正在一点一点地往里钻。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/60333760.jpg" alt=""></p>
+<p>易先生是一个时时刻刻都活在虚幻和黑暗中的人，或许他每天早晨醒来的第一件事，就是确定自己是否还活着，接着还要花一秒钟的时间记起自己是谁。</p>
+<p>活在黑暗中的人往往都不喜欢黑暗，他们总是活的很小心翼翼，时时刻刻警觉，警戒，生怕一个不小心，下一秒就丢了性命。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/37325406.jpg" alt=""></p>
+<p>王佳芝的出现，似乎给了易先生一点点亮光。</p>
+<p>两个人相逢，相互试探，相互套路，王佳芝和易先生之间，是一场没有赢家的战争。很残酷，也很激烈。残酷到要将王佳芝这个人硬生生的撕裂。</p>
+<p>影片的重头戏，便是王佳芝与易先生的三场床戏。</p>
+<p>第一场，在相互的试探之后，易先生以暴虐的方式征服王佳芝，那般激烈的云雨，是易先生对内心的情欲和征服欲过度的表达。但事后王佳芝嘴角洋溢的那一抹玩味的笑容，恰恰说明这场博弈真正的赢家并不是易先生。</p>
+<p>但，这才刚刚开始。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/29905339.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/45831576.jpg" alt=""></p>
+<p>第二场。易先生和王佳芝偷情。</p>
+<p>两个人皆是沦陷在了性爱当中，在爱与痛的边缘里享受着如潮水般的快感，两种无比极端的滋味混淆在一起，使得这样的压抑只能用忘我的疯狂来释放。</p>
+<p>王佳芝对易先生的感情，也在此时展露无余。</p>
+<p>第三场。</p>
+<p>有了前两次的铺垫，第三场绝对是一个高潮部分。</p>
+<p>这一次，两个人的灵魂真正交织在了一起。</p>
+<p>王佳芝将枕头捂在了易先生的脸上，将易先生置于黑暗当中，他的表情既享受，又挣扎。这是理性与感性的博弈，当灵魂出于这两者之间的边缘处，那种挣扎的感觉，以及对于未知的惶恐与迷惘，都在这一刻展现的淋漓尽致。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/21184951.jpg" alt=""></p>
+<p>处在崩溃的边缘，则需要一个宣泄口，王佳芝的眼泪就代表这样的一个意义。内心的挣扎与生理上的快感双重夹击，那样难以言表的感觉只能通过眼泪来宣泄。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/73963840.jpg" alt=""></p>
+<p>王佳芝是真正爱上了易先生，但易先生呢，他到底爱不爱王佳芝？</p>
+<p>爱。</p>
+<p>但爱的还不够。</p>
+<p>很显然，对于易先生来说，还有比对王佳芝的爱更加重要的东西。</p>
+<p>王佳芝爱易先生如浩瀚星辰，易先生爱王佳芝则只有一轮圆月。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/12488651.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/84375709.jpg" alt=""></p>
+<p>这首《天涯歌女》不要说易先生感动到掉泪，就连我这个局外人都无比动容。    王佳芝面对这个自己无论如何都不能去爱，但又彻彻底底地爱上了的男人，那种折磨，真的无比之残忍。</p>
+<p>有那么一瞬间，我真的希望影片到易先生送给王佳芝鸽子蛋这里就结束。这颗鸽子蛋，我想一般的女人都无法抵抗它的力量。不仅仅是因为它是鸽子蛋这么简单。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/22729361.jpg" alt=""></p>
+<p>易先生是爱王佳芝的，虽然没有王佳芝爱他那么爱。但是，他真的从头到尾都没有怀疑过王佳芝吗？</p>
+<p>影片中有几个细节。</p>
+<p>易先生约王佳芝到一家很安静的餐厅吃饭，王佳芝的口红粘了杯子。身为阔太太的王佳芝，不应该用这种劣质的口红。此为第一点。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/9981140.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/15153393.jpg" alt=""></p>
+<p>在两人云雨交欢当中，王佳芝看了一眼挂在墙上的枪，而易先生显然也发现了王佳芝的这一小小举动。在那般情况之下，王佳芝分神用短短两三秒的时间看了一眼挂在墙上的枪，作为一向谨慎的易先生，肯定也会生出一丝疑虑，哪怕只有一瞬间。此为第二处。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/85299302.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/82986805.jpg" alt=""></p>
+<p>王佳芝的感情战胜了理智，开口让易先生快走，易先生先是疑惑了一秒，随即便换上了惊恐的表情，以最快的速度溜之大吉。</p>
+<p>他能够在这样短的时间内明白王佳芝表达的意思，说明他对王佳芝不是完全的信任，对王佳芝的爱也没有到抹去戒备之心的地步。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/74448725.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/22432992.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/64475104.jpg" alt=""></p>
+<p>影片中，最令我动容的，实际上还是易先生走了之后的这段戏。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/21864663.jpg" alt=""></p>
+<p>看着橱窗内华贵的衣服，王佳芝的内心终于释然，任务结束了，一切终于结束了。她再也不是麦太太了，她以为自己彻底地从这个角色当中脱离，但灵魂里却又有怎么抹也抹不掉的痕迹。她内心五味杂陈的望着镜面反射出的世界，自己似乎就像是一个没有了身体的鬼魂。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/93766505.jpg" alt=""></p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/94235887.jpg" alt=""></p>
+<p>快活的车夫脸上洋溢着希望的笑容，多么像是没有参加行动之前的王佳芝，充满着活力，朝气蓬勃。而就是这样一辆充满希望的黄包车，将王佳芝拉向了死亡的沈渊。这象征着王佳芝并不后悔自己的决定，在王佳芝和麦太太两个身份当中，她付出巨大的代价选择了后者。</p>
+<p>爱，就是这样令人盲目。</p>
+<p>还有这颗一开始就准备好的药丸，王佳芝没有吃下去。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/4673585.jpg" alt=""></p>
+<p>既然她选择了继续做麦太太，那么，死在自己的爱人手里，或许才是最好的归宿。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/70814781.jpg" alt=""></p>
+<p>但实际上，镜子中的王佳芝，镜子外的麦太太，她早已分不清楚了，她唯一能做的，就是听自己内心的声音，跟着那个声音做出选择。</p>
+<p>得知真相之后的易先生是那样的无可奈何，但他又何尝不是一个被人操控着的提线木偶，时时刻刻活在黑暗中，戴着假面，一切都不受他的控制。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/23091327.jpg" alt=""></p>
+<p>而他的秘书，则是代表着更高层次的操控者。虽然影片中表现的很隐晦。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/76095337.jpg" alt=""></p>
+<p>秘书早就得知邝裕民六人的底细，但却到了最后才告知易先生。在那样一个时代背景之下，易先生又是那样特殊的一个身份，或许在现实面前，爱情的确虚幻了一些。</p>
+<p>结尾枪决处的邝裕民只能用诧异，不解的眼神质问王佳芝，临死之前，他怎么也说不出“你这个叛徒”这种言语，因为他完全不理解王佳芝的行为，或许此时，他才明白，自己根本一点儿也不懂王佳芝。</p>
+<p><img src="http://otqmaanbo.bkt.clouddn.com/17-10-11/24775855.jpg" alt=""></p>
+<p>完。</p>
+<p>PS：原来的图床挂了，所以图片都找不到了……其他文章如果图片挂了，都是一样的原因。</p>
 
       
 
@@ -377,11 +360,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">影评</a>
         		</li>
       		
 		</ul>
@@ -393,7 +372,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/编程/" class="article-tag-list-link color3">编程</a>
+        			<a href="/categories/杂文/" class="article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
@@ -448,7 +427,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/08/10/cssstudy5/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://chronosblog.top/2017/06/26/movie-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -462,18 +441,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/15/cssstudy6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/01/cssstudy1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS中的布局详解笔记（四）
+          总结CSS基础中的一些小坑
         
       </div>
     </a>
   
   
-    <a href="/2017/08/07/cssstudy4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS中的布局详解笔记（二）</div>
+    <a href="/2016/06/18/novel-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《意识保镖》</div>
       <i class="icon-circle-right"></i>
     </a>
   
